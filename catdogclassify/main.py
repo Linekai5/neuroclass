@@ -87,9 +87,8 @@ early_stopping = tf.keras.callbacks.EarlyStopping(
     restore_best_weights=True   
 )
 
-# 6. TRAINING AND MONITORING
+
 # Since the massive feature extraction layers are already trained, 
-# this will run incredibly fast and reach high accuracy in just a few epochs!
 history = model.fit(
     train_dataset,
     validation_data=val_dataset,
