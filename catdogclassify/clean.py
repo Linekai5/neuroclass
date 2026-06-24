@@ -1,5 +1,5 @@
 import os
-import tensorflow as tf
+import tensorflow as tf # type: ignore
 
 print("Putting on the hazmat suit. Cleaning the dataset...")
 deleted = 0

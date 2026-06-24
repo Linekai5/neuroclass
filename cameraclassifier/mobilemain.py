@@ -5,9 +5,9 @@ import io
 import socket
 import argparse
 import numpy as np
-import tensorflow as tf
-import cv2
-from flask import Flask, render_template_string, request, jsonify
+import tensorflow as tf # type: ignore
+import cv2 # type: ignore
+from flask import Flask, render_template_string, request, jsonify # type: ignore
 from PIL import Image
 
 # =====================================================================

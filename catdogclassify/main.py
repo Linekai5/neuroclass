@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tensorflow as tf # type: ignore
 
 print("Setting up data pipeline with validation split...")
 

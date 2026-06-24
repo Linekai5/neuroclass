@@ -1,7 +1,7 @@
 import os
-import cv2
+import cv2 # type: ignore
 import numpy as np
-import tensorflow as tf
+import tensorflow as tf # type: ignore
 
 # =====================================================================
 # 1. LOAD THE TRAINED BRAIN

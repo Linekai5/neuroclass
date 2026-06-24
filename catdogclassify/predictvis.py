@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tensorflow as tf # type: ignore
 import numpy as np
 import matplotlib.pyplot as plt
 
