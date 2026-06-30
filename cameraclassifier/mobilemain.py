@@ -470,8 +470,31 @@ if __name__ == "__main__":
     print("=" * 56)
     print(f"  Local Server Running On: http://localhost:{args.port}")
     print("=" * 56)
-    print("  STEP 2: Run 'ngrok http 5000' in another window.")
-    print("=" * 56)
+
+    try:
+        from pyngrok import ngrok
+        import qrcode
+        
+        # Open a ngrok tunnel to the local port
+        public_url = ngrok.connect(args.port).public_url
+        print(f"  Public ngrok URL: {public_url}")
+        print("=" * 56)
+        print("  Scan this QR Code with your mobile device:")
+        print()
+        
+        # Generate and print QR code
+        qr = qrcode.QRCode(version=1, box_size=10, border=2)
+        qr.add_data(public_url)
+        qr.make(fit=True)
+        qr.print_ascii(invert=True)
+        print("=" * 56)
+        
+    except ImportError:
+        print("  Optional: Run 'pip install pyngrok qrcode' to automatically")
+        print("  generate an ngrok URL and QR code in the terminal.")
+        print("=" * 56)
+        print(f"  STEP 2: Run 'ngrok http {args.port}' in another window.")
+        print("=" * 56)
 
     import logging
     log = logging.getLogger("werkzeug")
