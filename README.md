@@ -305,7 +305,7 @@ A TensorFlow decorator that traces and compiles Python/TensorFlow code into a st
 
 ---
 
-## 🚀 How to Run Each Part
+## How to Run Each Part
 
 ### Prerequisites
 ```bash
